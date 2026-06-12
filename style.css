@@ -102,14 +102,15 @@ a { color: var(--accent); }
 
 
 /* About page */
-.contact-item {
+
+.contact-list {
   display: flex;
+  gap: 1rem;
   align-items: center;
-  gap: 0.75rem;
 }
 
 .contactImg {
-  width: 3rem;
+  width: 4rem;
   height: auto;
 }
 
