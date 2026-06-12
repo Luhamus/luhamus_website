@@ -1,0 +1,91 @@
+  /* ── Reset & base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:      #ffffff;
+    --fg:      #111111;
+    --muted:   #666666;
+    --accent:  #0057ff;
+    --max-w:   640px;
+    --gap:     1.5rem;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    padding: 3rem 1.25rem;
+  }
+
+  /* ── Layout ── */
+  #app {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+
+  /* ── Nav ── */
+  nav {
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-family: system-ui, sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    transition: color 0.15s;
+  }
+
+  nav a:hover,
+  nav a.active { color: var(--fg); }
+
+  /* ── Page sections ── */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  h1 {
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+
+  p { margin-bottom: var(--gap); }
+
+  a { color: var(--accent); }
+
+  /* ── Blog list ── */
+  .post-list { list-style: none; }
+
+  .post-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .post-list a {
+    text-decoration: none;
+    color: var(--fg);
+  }
+
+  .post-list a:hover { text-decoration: underline; }
+
+  .post-date {
+    color: var(--muted);
+    font-family: system-ui, sans-serif;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 480px) {
+    body { padding: 2rem 1rem; }
+    .post-list li { flex-direction: column; gap: 0.15rem; }
+  }
