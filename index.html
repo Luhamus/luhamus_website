@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luhamus</title>
   <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="app">
@@ -15,10 +16,22 @@
     <nav id="nav"></nav>
 
     <main>
-      <h1>Hello and welcome!</h1>
+      <h1 class="handwrite">Hello and welcome!</h1>
       <p>My name is <strong>Rasmus Luha</strong>.<br>I am (graduated but nevertheless still) studying Computer Science with a focus on DevOps.</p>
-      <!--  <p>You can reach me at <a href="mailto:you@example.com">you@example.com</a>.</p> -->
     </main>
+
+    <div class="widget-row">
+      <div class="widget-card">
+        <canvas id="clock" width="180" height="180"></canvas>
+      </div>
+      <div class="widget-card">
+        <div id="terminal-box">
+          <p class="t-line"><span class="t-prompt">rasmus@luhamus:~$ </span><span id="t-cmd" class="t-cmd"></span><span class="cursor"></span></p>
+          <div id="t-output"></div>
+        </div>
+      </div>
+    </div>
+
   </div>
   <footer id="footer"></footer>
   <script src="/script.js"></script>

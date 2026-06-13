@@ -152,8 +152,81 @@ pre {
   margin-bottom: 1.5rem;
 }
 
-/* Mobile─*/
+/*Mobile*/
 @media (max-width: 480px) {
   body { padding: 2rem 1rem; }
   .post-list li { flex-direction: column; gap: 0.15rem; }
+}
+
+
+/* Landingpage Animation */
+@font-face {
+  font-family: 'Just Another Hand';
+  src: url('/fonts/JustAnotherHand-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes write {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.handwrite {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: write 5s steps(100) forwards;
+  font-family: 'Just Another Hand', cursive;
+  font-size: 3.5rem;
+}
+
+
+/* -- clock and terminal -- */
+
+.widget-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.widget-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#terminal-box {
+  font-family: monospace;
+  font-size: 13px;
+  color: #a8c5a0;
+  min-height: 180px;
+  width: 100%;
+}
+
+.t-line { margin: 0; line-height: 1.7; }
+.t-prompt { color: #a8c5a0; }
+.t-cmd { color: #fff; }
+.t-out { color: #888; }
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background: #a8c5a0;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .widget-row { grid-template-columns: 1fr; }
 }
