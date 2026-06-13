@@ -24,7 +24,7 @@ const title = document.querySelector('.handwrite');
 const hint = document.querySelector('.click-hint');
 
 function replayTitle() {
-  title.innerHTML = '<a href="gif/" class="handwrite" target="_blank">For cool GIF, click me!</a>';
+  title.innerHTML = '<a href="gif/" class="handwrite">For cool GIF, click me!</a>';
   title.classList.remove('handwrite')
   void title.offsetWidth
   title.classList.add('handwrite')
