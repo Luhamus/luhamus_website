@@ -5,7 +5,7 @@
   --bg:     #f0f0eb;
   --fg:     #111111;
   --muted:  #666666;
-  --accent: #0057ff;
+  --accent: #b8926a;
 }
 
 body {
@@ -18,16 +18,17 @@ body {
 }
 
 #app {
-  max-width: 640px;
+  max-width: 690px;
   margin: 0 auto;
 }
 
 /* Nav */
 nav {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   display: flex;
   gap: 1.25rem;
   font-weight: bold;
+  justify-content: center
 }
 
 nav a {
@@ -167,20 +168,49 @@ pre {
   font-style: normal;
 }
 
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @keyframes write {
   from { width: 0; }
   to { width: 100%; }
 }
 
+@keyframes blink-hint {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
 .handwrite {
+  cursor: pointer;
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  animation: write 5s steps(100) forwards;
+  animation: write 4s steps(120) forwards;
   font-family: 'Just Another Hand', cursive;
   font-size: 3.5rem;
 }
 
+.title-row {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.click-hint {
+  font-family: 'Just Another Hand', cursive;
+  font-size: 1.05rem;
+  white-space: nowrap;
+  color: var(--muted);
+  cursor: pointer;
+  opacity: 0;
+  margin-top: -0.5rem;
+  margin-left: 0.5rem;
+  animation: fade-in 1s ease 4s forwards;
+  animation: fade-in 1s ease 4s forwards, blink-hint 1.5s ease 5s infinite;
+}
 
 /* -- clock and terminal -- */
 
