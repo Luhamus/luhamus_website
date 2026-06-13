@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Luhamus</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    .cv-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .cv-download {
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      color: var(--fg);
+      text-decoration: none;
+      border: 1px solid var(--fg);
+      padding: 0.4rem 0.9rem;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .cv-download:hover {
+      background: var(--fg);
+      color: var(--bg);
+    }
+
+    .cv-frame {
+      width: 100%;
+      height: 80vh;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <header class="banner">
+      <span>Luhamus</span>
+    </header>
+    <nav id="nav"></nav>
+
+    <main>
+      <div class="cv-toolbar">
+        <h1>My CV</h1>
+        <a href="/pdfs/cv.pdf" download="Rasmus_Luha_CV.pdf" class="cv-download">Download PDF</a>
+      </div>
+
+      <iframe class="cv-frame" src="pdfs/cv.pdf"></iframe>
+    </main>
+  </div>
+  <footer id="footer"></footer>
+  <script src="/script.js"></script>
+</body>
+</html>
