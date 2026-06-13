@@ -46,7 +46,7 @@ nav a.active { color: var(--fg); }
 
 /* Footer */
 footer {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
   padding-top: 1rem;
   color: var(--muted);
   font-family: system-ui, sans-serif;
