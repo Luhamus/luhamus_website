@@ -5,6 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luhamus</title>
   <link rel="stylesheet" href="/style.css" />
+  <style>
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      text-decoration: none;
+      padding: 0.4rem 0.9rem;
+      background: #a8c5a0;
+      color: #fff;
+      border: none;
+      transition: color 0.2s, background 0.2s;
+    }
+  
+    .btn:hover {
+      background: #a8c5a0;
+      color: #2d4a29;
+    }
+  </style>
 </head>
 <body>
   <div id="app">
@@ -13,9 +38,15 @@
     </header>
     <nav id="nav"></nav>
 
+    <div class="page-header">
+      <h2>Here is a cool GIF for you</h2>
+      <a href="/index.html" class="btn">Back home</a>
+    </div>
+
     <main>
       <img src="cool.gif" alt="cool gif" style="width: 100%; height: auto;">
     </main>
+
   </div>
   <footer id="footer"></footer>
   <script src="/script.js"></script>
